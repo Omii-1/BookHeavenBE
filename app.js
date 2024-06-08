@@ -1,7 +1,6 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-require ("dotenv").config()
 require ("./conn/conn")
 const user = require("./routes/user")
 const book = require("./routes/book")
@@ -19,6 +18,6 @@ app.use("/api/v1", favourite)
 app.use("/api/v1", cart)
 app.use("/api/v1", order)
 
-app.listen(process.env.port, ()=>{
-  console.log(`server started ${process.env.port}`);
+app.listen(1000, ()=>{
+  console.log(`server started 1000`);
 })
